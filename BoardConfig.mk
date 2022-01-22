@@ -47,12 +47,10 @@ TARGET_USE_QTI_BT_STACK := true
 BOARD_HAVE_BLUETOOTH_QCOM := true
 
 # Bootloader
-TARGET_BOARD_PLATFORM := bengal
 TARGET_BOOTLOADER_BOARD_NAME := bengal
 
 # Camera
 TARGET_USES_QTI_CAMERA_DEVICE := true
-
 
 # Display
 TARGET_USES_HWC2 := true
@@ -101,12 +99,11 @@ BOARD_KERNEL_IMAGE_NAME := Image.gz
 BOARD_KERNEL_SEPARATED_DTBO := false
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_HEADERS := kernel/xiaomi/juice
-TARGET_KERNEL_CONFIG := vendor/mibengal_defconfig
+TARGET_KERNEL_CONFIG := vendor/lime-perf_defconfig
 
-#clang
+# Clang
 TARGET_KERNEL_CLANG_COMPILE := true
-TARGET_KERNEL_CLANG_VERSION := proton
-KERNEL_TOOLCHAIN_PATH := $(shell pwd)/prebuilts/clang/host/linux-x86/clang-proton/bin/aarch64-linux-gnu-
+TARGET_USE_LATEST_CLANG := true
 
 TARGET_PREBUILT_DTB := $(DEVICE_PATH)/prebuilt/dtb
 BOARD_PREBUILT_DTBOIMAGE := $(DEVICE_PATH)/prebuilt/dtbo.img
